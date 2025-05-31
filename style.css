@@ -1,49 +1,22 @@
-.form {
- --width-of-input: 200px;
- --border-height: 1px;
- --border-before-color: rgba(221, 221, 221, 0.39);
- --border-after-color: #5891ff;
- --input-hovered-color: #4985e01f;
- position: relative;
- width: var(--width-of-input);
-}
-/* styling of Input */
 .input {
- color: #fff;
- font-size: 0.9rem;
- background-color: transparent;
- width: 100%;
- box-sizing: border-box;
- padding-inline: 0.5em;
- padding-block: 0.7em;
- border: none;
- border-bottom: var(--border-height) solid var(--border-before-color);
-}
-/* styling of animated border */
-.input-border {
- position: absolute;
- background: var(--border-after-color);
- width: 0%;
- height: 2px;
- bottom: 0;
- left: 0;
- transition: 0.3s;
-}
-/* Hover on Input */
-input:hover {
- background: var(--input-hovered-color);
+  color: white;
+  border: 2px solid #5b65ff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  max-width: 190px;
 }
 
-input:focus {
- outline: none;
-}
-/* here is code of animated border */
-input:focus ~ .input-border {
- width: 100%;
+.input:active {
+  box-shadow: 2px 2px 15px #5b65ff inset;
 }
 
 body{
   background-size: contain, cover;
-background: #8c4c4c;
-background: radial-gradient(circle, rgba(140, 76, 76, 1) 0%, rgba(43, 43, 43, 1) 100%);
+background: #1a1a1a;
+background: linear-gradient(90deg, rgba(26, 26, 26, 1) 0%, rgba(48, 48, 48, 1) 35%, rgba(66, 66, 66, 1) 100%);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }

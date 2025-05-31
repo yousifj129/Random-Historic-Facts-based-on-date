@@ -1,0 +1,2 @@
+input:
+<input class="input" placeholder="Type your text" required="" type="text">
