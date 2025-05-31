@@ -1,20 +1,49 @@
+.form {
+ --width-of-input: 200px;
+ --border-height: 1px;
+ --border-before-color: rgba(221, 221, 221, 0.39);
+ --border-after-color: #5891ff;
+ --input-hovered-color: #4985e01f;
+ position: relative;
+ width: var(--width-of-input);
+}
+/* styling of Input */
 .input {
-  max-width: 200px;
-  min-height: 40px;
-  padding: 10px;
-  font-family: 'Courier New', Courier, monospace;
-  outline: none;
-  background: #e8e8e8;
-  box-shadow: 5px 5px 17px #c8c8c8,
-             -5px -5px 17px #ffffff;
-  border: none;
-  border-radius: 10px;
-  transition: all .5s;
+ color: #fff;
+ font-size: 0.9rem;
+ background-color: transparent;
+ width: 100%;
+ box-sizing: border-box;
+ padding-inline: 0.5em;
+ padding-block: 0.7em;
+ border: none;
+ border-bottom: var(--border-height) solid var(--border-before-color);
+}
+/* styling of animated border */
+.input-border {
+ position: absolute;
+ background: var(--border-after-color);
+ width: 0%;
+ height: 2px;
+ bottom: 0;
+ left: 0;
+ transition: 0.3s;
+}
+/* Hover on Input */
+input:hover {
+ background: var(--input-hovered-color);
 }
 
-.input:focus {
-  background: #e8e8e8;
-  box-shadow: inset 5px 5px 17px #c8c8c8,
-            inset -5px -5px 17px #ffffff;
+input:focus {
+ outline: none;
+}
+/* here is code of animated border */
+input:focus ~ .input-border {
+ width: 100%;
 }
 
+body{
+  background-size: contain, cover;
+background: #8c4c4c;
+background: radial-gradient(circle, rgba(140, 76, 76, 1) 0%, rgba(43, 43, 43, 1) 100%);
+}
